@@ -18,6 +18,7 @@
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
+          <!-- Sign Up Form -->
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign Up</h2>
 
@@ -49,6 +50,43 @@
 
             <input type="submit" value="Register" class="btn solid" />
 
+            <p class="social-text">Or Sign Up with:</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </form>
+
+          <!-- Sign In form -->
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign In</h2>
+
+            <div class="form-control">
+              <label for="username">Username</label>
+              <input type="text" id="username" placeholder="Enter username" />
+              <small>Error message</small>
+
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter Password"
+              />
+              <small>Error message</small>
+            </div>
+
+            <input type="submit" value="Login" class="btn solid" />
+
             <p class="social-text">Or Sign in with:</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -67,7 +105,31 @@
           </form>
         </div>
       </div>
-      <div class="panels-container"></div>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              ad, aperiam delectus quam dignissimos asperiores.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">Sign up</button>
+          </div>
+          <img src="assets/svg/reginster.svg" alt="sign-up image" />
+        </div>
+
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              ad, aperiam delectus quam dignissimos asperiores.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">Sign in</button>
+          </div>
+          <img src="assets/svg/eye.svg" alt="sign-in image" />
+        </div>
+      </div>
     </div>
   </body>
 </html>

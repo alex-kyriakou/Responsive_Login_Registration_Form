@@ -13,6 +13,7 @@
   .social-icon {
     width: 45px;
     height: 45px;
+    font-size: 1.2rem;
     margin-right: 0.45rem;
     display: flex;
     justify-content: center;
@@ -25,6 +26,7 @@
     &:hover {
       transform: scale(1.1);
       border-color: rgb(0, 174, 255);
+      box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
     }
   }
 }

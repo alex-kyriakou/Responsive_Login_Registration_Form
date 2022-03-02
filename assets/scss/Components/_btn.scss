@@ -9,7 +9,7 @@
   font-size: 1.2rem;
   margin-bottom: 1rem;
   border: 1px solid #fff;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  // box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 20px 3px;
   cursor: pointer;
   background-color: #5995fd;
   color: #fff;
@@ -22,7 +22,16 @@
   }
 
   &:active {
-    box-shadow: 0;
+    box-shadow: none;
     transform: scale(0.98);
+  }
+
+  &.transparent {
+    margin: 0;
+    background-color: transparent;
+    width: 130px;
+    height: 41px;
+    font-size: 0.9rem;
+    font-weight: 600;
   }
 }
