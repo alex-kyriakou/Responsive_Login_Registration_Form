@@ -1,0 +1,30 @@
+@use "../Abstract/" as *;
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+
+  .social-icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 0.45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    color: rgb(0, 174, 255);
+    transition: 0.3s transform, border-color ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+      border-color: rgb(0, 174, 255);
+    }
+  }
+}

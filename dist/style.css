@@ -91,14 +91,45 @@ input {
   border: 1px solid #fff;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   cursor: pointer;
-  transition: 0.3 ease all;
+  background-color: #5995fd;
+  color: #fff;
+  transition: 0.5 ease all;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .btn:hover {
-  border-color: #00aeff;
+  background-color: #4f84e2;
 }
 .btn:active {
   box-shadow: 0;
   transform: scale(0.98);
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.social-media .social-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  color: #00aeff;
+  transition: 0.3s transform, border-color ease-in;
+}
+.social-media .social-icon:hover {
+  transform: scale(1.1);
+  border-color: #00aeff;
 }
 
 /*# sourceMappingURL=style.css.map */
