@@ -5,7 +5,7 @@
   width: 100%;
   min-height: 100vh;
   background: #f9fafb;
-  // overflow: hidden;
+  overflow: hidden;
 
   &:before {
     content: "";
@@ -19,6 +19,52 @@
     right: 48%;
     transform: translateY(-50%);
     z-index: 6;
+    transition: 1.3s ease-in-out;
+  }
+
+  &.sign-up-mode {
+    transition: 0.9s 0.5s ease-in-out;
+
+    &:before {
+      transform: translate(100%, -50%);
+      right: 52%;
+    }
+
+    .sign-in-form {
+      opacity: 0;
+    }
+
+    .sign-up-form {
+      opacity: 1;
+    }
+
+    .left-panel {
+      pointer-events: none;
+
+      .content {
+        transform: translate(-1200px);
+      }
+      .signin-img {
+        opacity: 0;
+      }
+    }
+
+    .signin-signup {
+      left: 25%;
+    }
+
+    .right-panel {
+      pointer-events: all;
+      opacity: 1;
+
+      .content {
+        transform: translateX(0px);
+      }
+
+      .signin-img {
+        transform: translateX(0px);
+      }
+    }
   }
 }
 
@@ -31,6 +77,7 @@
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+  transition: 1s 0.7s ease-in-out;
 }
 
 .panels-container {

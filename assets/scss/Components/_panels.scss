@@ -9,7 +9,9 @@
   z-index: 7;
 
   .content {
+    transition: 0.9s 0.6s ease-in-out;
     color: #fff;
+
     h3 {
       font-size: 1.7rem;
       font-weight: 600;
@@ -27,13 +29,24 @@
 .left-panel {
   padding: 3rem 17% 2rem 12%;
   pointer-events: all;
+
+  .signin-img {
+    -webkit-transform: scaleXs(-1);
+    transform: scaleX(-1);
+    margin-left: 200px;
+    margin-top: 15%;
+    transition: opacity 0.5s 0.5s ease-in-out;
+  }
 }
 
 .right-panel {
   padding: 3rem 12% 2rem 17%;
   pointer-events: none;
+  transition: 0.9s 0.6s ease-in-out;
+  opacity: 0;
 
   & img {
     transform: translateX(1200px);
+    transition: 0.9s 0.6s ease-in-out;
   }
 }
