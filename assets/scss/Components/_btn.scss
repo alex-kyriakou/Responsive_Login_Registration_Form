@@ -37,5 +37,11 @@
     &:hover {
       background-color: #4f84e2;
     }
+
+    @include tablet {
+      width: 110px;
+      height: 35px;
+      font-size: 0.7rem;
+    }
   }
 }

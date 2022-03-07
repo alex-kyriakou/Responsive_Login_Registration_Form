@@ -4,13 +4,17 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: #f9fafb;
+  background: #fff;
   overflow: hidden;
+
+  @include tablet {
+    min-height: 800px;
+    height: 100vh;
+  }
 
   &:before {
     content: "";
     position: absolute;
-
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
@@ -20,22 +24,67 @@
     transform: translateY(-50%);
     z-index: 6;
     transition: 1.3s ease-in-out;
+
+    @include tablet {
+      width: 1500px;
+      height: 1500px;
+      transform: translateX(-50%);
+      left: 30%;
+      bottom: 68%;
+      right: initial;
+      top: initial;
+      transition: 2s ease-in-out;
+    }
+  }
+
+  .signin-signup {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    z-index: 5;
+    transition: 1s 0.7s ease-in-out;
+
+    @include tablet {
+      width: 100%;
+      left: 50%;
+
+      top: 110%;
+      transform: translate(-50%, -100%);
+      transition: 1s 0.8s ease-in-out;
+      z-index: 100;
+    }
   }
 
   &.sign-up-mode {
-    transition: 0.9s 0.5s ease-in-out;
+    transition: 0.9s 0.7s ease-in-out;
+
+    @include tablet {
+      left: 50%;
+    }
 
     &:before {
       transform: translate(100%, -50%);
       right: 52%;
+
+      @include tablet {
+        transform: translate(-50%, 100%);
+        bottom: 32%;
+        right: initial;
+      }
     }
 
     .sign-in-form {
       opacity: 0;
+      z-index: 1;
     }
 
     .sign-up-form {
       opacity: 1;
+      z-index: 2;
     }
 
     .left-panel {
@@ -46,6 +95,13 @@
       }
       .signin-img {
         opacity: 0;
+      }
+
+      @include tablet {
+        .content,
+        .signin-img {
+          transform: translateY(-300);
+        }
       }
     }
 
@@ -68,18 +124,6 @@
   }
 }
 
-.signin-signup {
-  position: absolute;
-  top: 50%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-  display: grid;
-  grid-template-columns: 1fr;
-  z-index: 5;
-  transition: 1s 0.7s ease-in-out;
-}
-
 .panels-container {
   // background-color: green;
   position: absolute;
@@ -90,4 +134,16 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   // overflow-x: hidden;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    .image {
+      width: 200px;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.6s;
+      visibility: visible;
+    }
+  }
 }

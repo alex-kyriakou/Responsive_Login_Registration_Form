@@ -6,22 +6,53 @@
   align-items: flex-end;
   justify-content: space-around;
   text-align: center;
-  z-index: 7;
+  z-index: 6;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.5rem 8%;
+    grid-column: 1 / 2;
+
+    .image {
+      width: 200px;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.6s;
+      visibility: visible;
+    }
+  }
 
   .content {
     transition: 0.9s 0.6s ease-in-out;
     color: #fff;
 
+    @include tablet {
+      padding-right: 15%;
+      transition: transform 0.9s ease-in-out;
+      transition-delay: 0.8s;
+      visibility: visible;
+    }
+
     h3 {
       font-size: 1.7rem;
       font-weight: 600;
       line-height: 1;
+
+      @include tablet {
+        font-size: 1.2rem;
+      }
     }
 
     p {
       font-size: 1.2rem;
       padding: 0.7rem 0;
       margin-bottom: 1.5rem;
+
+      @include tablet {
+        font-size: 0.7rem;
+        padding: 0.5rem 0;
+      }
     }
   }
 }
@@ -30,10 +61,17 @@
   padding: 3rem 17% 2rem 12%;
   pointer-events: all;
 
+  @include tablet {
+    grid-row: 1 / 2;
+
+    // visibility: hidden;
+  }
+
   .signin-img {
     -webkit-transform: scaleXs(-1);
     transform: scaleX(-1);
-    margin-left: 200px;
+    // margin-left: 200px;
+    width: 100%;
     margin-top: 15%;
     transition: opacity 0.5s 0.5s ease-in-out;
   }
@@ -45,7 +83,16 @@
   transition: 0.9s 0.6s ease-in-out;
   opacity: 0;
 
-  & img {
+  @include tablet {
+    grid-row: 3/4;
+  }
+
+  .signin-img {
+    width: 100%;
+  }
+
+  .signin-img,
+  .content {
     transform: translateX(1200px);
     transition: 0.9s 0.6s ease-in-out;
   }
