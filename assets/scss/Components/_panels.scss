@@ -14,13 +14,6 @@
     align-items: center;
     padding: 2.5rem 8%;
     grid-column: 1 / 2;
-
-    .image {
-      width: 200px;
-      transition: transform 0.9s ease-in-out;
-      transition-delay: 0.6s;
-      visibility: visible;
-    }
   }
 
   .content {
@@ -32,6 +25,10 @@
       transition: transform 0.9s ease-in-out;
       transition-delay: 0.8s;
       visibility: visible;
+    }
+
+    @include mobile {
+      padding: 0.5rem 1rem;
     }
 
     h3 {
@@ -67,6 +64,14 @@
     // visibility: hidden;
   }
 
+  img {
+    .image {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
   .signin-img {
     -webkit-transform: scaleXs(-1);
     transform: scaleX(-1);
@@ -74,6 +79,10 @@
     width: 100%;
     margin-top: 15%;
     transition: opacity 0.5s 0.5s ease-in-out;
+
+    @include mobile {
+      display: none;
+    }
   }
 }
 
@@ -84,7 +93,15 @@
   opacity: 0;
 
   @include tablet {
-    grid-row: 3/4;
+    grid-row: 3 / 4;
+  }
+
+  img {
+    .image {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   .signin-img {
