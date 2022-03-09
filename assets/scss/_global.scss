@@ -10,21 +10,11 @@
   box-sizing: border-box;
 }
 
-html {
-  @include tablet {
-    font-size: 90%;
-  }
-
-  @include mobile {
-    font-size: 80%;
-  }
-}
-
 body,
 input {
   font-family: "Roboto", sans-serif;
 }
 
-image {
-  width: 100%;
-}
+// image {
+//   width: 100%;
+// }

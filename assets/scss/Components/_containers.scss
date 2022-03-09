@@ -78,66 +78,44 @@
   }
 
   &.sign-up-mode {
-    transition: 0.9s 0.7s ease-in-out;
-
     &:before {
       transform: translate(100%, -50%);
       right: 52%;
 
-      @include mobile {
+      @include tablet {
         transform: translate(-50%, 100%);
         bottom: 32%;
         right: initial;
       }
-      @include tablet {
-        bottom: 72%;
-        left: 50%;
+    }
+    .left-panel {
+      .image {
+        transform: translateX(-800px);
       }
+      .content {
+        transform: translateX(-800px);
+      }
+      pointer-events: none;
     }
-
-    .sign-in-form {
-      opacity: 0;
-      z-index: 1;
+    .signin-signup {
+      left: 25%;
     }
-
-    .sign-up-form {
+    form.sign-up-form {
       opacity: 1;
       z-index: 2;
     }
-
-    .left-panel {
-      pointer-events: none;
-
-      .content {
-        transform: translate(-1200px);
-      }
-      .signin-img {
-        opacity: 0;
-      }
-
-      @include tablet {
-        .content,
-        .signin-img {
-          transform: translateY(-300);
-        }
-      }
+    form.sign-in-form {
+      opacity: 0;
+      z-index: 1;
     }
-
-    // .signin-signup {
-    //   left: 25%;
-    // }
-
     .right-panel {
-      pointer-events: all;
-      opacity: 1;
-
+      .image {
+        transform: translateX(0%);
+      }
       .content {
-        transform: translateX(0px);
+        transform: translateX(0%);
       }
-
-      .signin-img {
-        transform: translateX(0px);
-      }
+      pointer-events: all;
     }
   }
 }

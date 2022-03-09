@@ -3,12 +3,20 @@
 .social-text {
   padding: 0.7rem 0;
   font-size: 1rem;
+
+  @include tablet {
+    padding: 0.3rem 0;
+  }
 }
 
 .social-media {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
+
+  @include tablet {
+    margin: 0;
+  }
 
   .social-icon {
     width: 45px;

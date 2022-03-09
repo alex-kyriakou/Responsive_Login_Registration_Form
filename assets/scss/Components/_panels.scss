@@ -60,17 +60,15 @@
 
   @include tablet {
     grid-row: 1 / 2;
-
-    // visibility: hidden;
   }
 
-  img {
-    .image {
-      @include mobile {
-        display: none;
-      }
-    }
-  }
+  // img {
+  //   .image {
+  //     @include mobile {
+  //       display: none;
+  //     }
+  //   }
+  // }
 
   .signin-img {
     -webkit-transform: scaleXs(-1);
@@ -79,6 +77,14 @@
     width: 100%;
     margin-top: 15%;
     transition: opacity 0.5s 0.5s ease-in-out;
+
+    @include tablet {
+      width: 250px;
+      // transition: opacity 0.9s ease-in-out;
+      transition-delay: 0.6s;
+      // transform: scaleX(-1);
+      -webkit-transform: scaleXs(1);
+    }
 
     @include mobile {
       display: none;
@@ -90,22 +96,30 @@
   padding: 3rem 12% 2rem 17%;
   pointer-events: none;
   transition: 0.9s 0.6s ease-in-out;
-  opacity: 0;
+  opacity: 1;
 
   @include tablet {
     grid-row: 3 / 4;
-  }
 
-  img {
     .image {
-      @include mobile {
-        display: none;
-      }
+      transform: translateY(300px);
+    }
+
+    .content {
+      transform: translateY(300px);
     }
   }
 
   .signin-img {
     width: 100%;
+
+    @include tablet {
+      width: 250px;
+    }
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .signin-img,
