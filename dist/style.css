@@ -179,6 +179,13 @@ input {
   z-index: 1;
   opacity: 0;
 }
+@media only screen and (max-width: 570px) {
+  .forms-container form.sign-up-form {
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+  }
+}
 .forms-container form .title {
   font-size: 2.2rem;
   color: #444;

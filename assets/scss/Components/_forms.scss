@@ -33,6 +33,12 @@
     &.sign-up-form {
       z-index: 1;
       opacity: 0;
+
+      @include mobile {
+        position: absolute;
+        left: 50%;
+        bottom: 65%;
+      }
     }
 
     .title {
