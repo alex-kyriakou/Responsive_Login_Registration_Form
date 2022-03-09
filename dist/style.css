@@ -100,7 +100,7 @@ input {
   pointer-events: none;
 }
 .container.sign-up-mode .left-panel .image {
-  transform: translateX(-800px);
+  opacity: 0;
 }
 .container.sign-up-mode .left-panel .content {
   transform: translateX(-800px);
@@ -139,12 +139,6 @@ input {
   .panels-container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
-  }
-  .panels-container .image {
-    width: 200px;
-    transition: transform 0.9s ease-in-out;
-    transition-delay: 0.6s;
-    visibility: visible;
   }
 }
 
