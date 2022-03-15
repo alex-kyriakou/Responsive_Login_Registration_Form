@@ -47,7 +47,7 @@
       margin-bottom: 1.5rem;
 
       @include tablet {
-        font-size: 0.7rem;
+        font-size: 1rem;
         padding: 0.5rem 0;
       }
     }
@@ -76,6 +76,7 @@
       transition-delay: 0.6s;
       // transform: scaleX(-1);
       -webkit-transform: scaleXs(1);
+      margin-top: 0;
     }
 
     @include mobile {

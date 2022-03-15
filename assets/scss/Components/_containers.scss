@@ -24,8 +24,8 @@
   &:before {
     content: "";
     position: absolute;
-    width: 2000px;
-    height: 2000px;
+    width: 2400px;
+    height: 2400px;
     border-radius: 50%;
     background: linear-gradient(-45deg, #4481eb, #04befe);
     top: -10%;
@@ -100,15 +100,25 @@
     }
     .signin-signup {
       left: 25%;
+
+      @include tablet {
+        left: 50%;
+        top: 72%;
+      }
     }
     form.sign-up-form {
       opacity: 1;
       z-index: 2;
+
+      // @include tablet {
+      //   transform: scale(0.8);
+      // }
     }
     form.sign-in-form {
       opacity: 0;
       z-index: 1;
     }
+
     .right-panel {
       .image {
         transform: translateX(0%);
