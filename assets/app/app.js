@@ -22,5 +22,6 @@ sign_in_btn.addEventListener("click", () => {
 
 // Validation functionality
 signUp_form.addEventListener("submit", (e) => {
+  e.preventDefault();
   console.log("submit");
 });

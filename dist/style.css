@@ -79,7 +79,7 @@ input {
 @media only screen and (max-width: 870px) {
   .container .signin-signup {
     width: 100%;
-    top: 100%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
@@ -111,7 +111,7 @@ input {
 @media only screen and (max-width: 870px) {
   .container.sign-up-mode .signin-signup {
     left: 50%;
-    top: 76%;
+    top: 72%;
   }
 }
 .container.sign-up-mode form.sign-up-form {
@@ -216,14 +216,13 @@ input {
 .forms-container form .form-control input {
   width: 100%;
   font-size: 1.1rem;
-  color: #fff;
+  color: #333;
   font-family: inherit;
   line-height: 1;
   padding: 0.5rem;
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   outline: none;
-  margin-bottom: 2rem;
   transition: 0.3s ease all;
 }
 .forms-container form .form-control input:focus {
@@ -295,6 +294,16 @@ input {
     height: 35px;
     font-size: 0.7rem;
   }
+}
+
+#btn-login {
+  color: #fff;
+  margin-top: 1rem;
+}
+
+#btn-register {
+  color: #fff;
+  margin-top: 1rem;
 }
 
 .social-text {

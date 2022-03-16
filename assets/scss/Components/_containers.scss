@@ -64,7 +64,7 @@
 
     @include tablet {
       width: 100%;
-      top: 100%;
+      top: 92%;
       left: 50%;
 
       transform: translate(-50%, -100%);
@@ -103,7 +103,7 @@
 
       @include tablet {
         left: 50%;
-        top: 76%;
+        top: 72%;
       }
     }
     form.sign-up-form {
