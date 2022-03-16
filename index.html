@@ -19,12 +19,16 @@
       <div class="forms-container">
         <div class="signin-signup">
           <!-- Sign Up Form -->
-          <form action="#" class="sign-up-form">
+          <form id="signUp_form" action="#" class="sign-up-form form">
             <h2 class="title">Sign Up</h2>
 
             <div class="form-control">
               <label for="username">Username</label>
-              <input type="text" id="username" placeholder="Enter username" />
+              <input
+                type="text"
+                id="username_singUp"
+                placeholder="Enter username"
+              />
               <small>Error message</small>
 
               <label for="email">Email</label>
@@ -34,7 +38,7 @@
               <label for="password">Password</label>
               <input
                 type="password"
-                id="password"
+                id="password_signUp"
                 placeholder="Enter Password"
               />
               <small>Error message</small>
@@ -46,9 +50,14 @@
                 placeholder="Confirm Password"
               />
               <small>Error message</small>
-            </div>
 
-            <input type="submit" value="Register" class="btn solid" />
+              <input
+                id="btn-register"
+                type="submit"
+                value="Register"
+                class="btn solid"
+              />
+            </div>
 
             <p class="social-text">Or Sign Up with:</p>
             <div class="social-media">
@@ -68,24 +77,33 @@
           </form>
 
           <!-- Sign In Form -->
-          <form action="#" class="sign-in-form">
+          <form id="signIn_form" action="#" class="sign-in-form form">
             <h2 class="title">Sign In</h2>
 
             <div class="form-control">
               <label for="username">Username</label>
-              <input type="text" id="username" placeholder="Enter username" />
+              <input
+                type="text"
+                id="username_signIn"
+                placeholder="Enter username"
+              />
               <small>Error message</small>
 
               <label for="password">Password</label>
               <input
                 type="password"
-                id="password"
+                id="password_signIn"
                 placeholder="Enter Password"
               />
               <small>Error message</small>
-            </div>
 
-            <input type="submit" value="Login" class="btn solid" />
+              <input
+                id="btn-login"
+                type="submit"
+                value="Login"
+                class="btn solid"
+              />
+            </div>
 
             <p class="social-text">Or Sign in with:</p>
             <div class="social-media">

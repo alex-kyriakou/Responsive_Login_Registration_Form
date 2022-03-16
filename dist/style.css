@@ -79,7 +79,7 @@ input {
 @media only screen and (max-width: 870px) {
   .container .signin-signup {
     width: 100%;
-    top: 95%;
+    top: 100%;
     left: 50%;
     transform: translate(-50%, -100%);
     transition: 1s 0.8s ease-in-out;
@@ -111,7 +111,7 @@ input {
 @media only screen and (max-width: 870px) {
   .container.sign-up-mode .signin-signup {
     left: 50%;
-    top: 72%;
+    top: 76%;
   }
 }
 .container.sign-up-mode form.sign-up-form {
@@ -198,7 +198,8 @@ input {
   max-width: 380px;
   width: 100%;
   background-color: #f0f0f0;
-  padding: 2rem 1.5rem;
+  padding: 0rem 1.5rem;
+  padding-top: 2rem;
   border-radius: 0.5rem;
   margin: 1.5rem 0;
   box-shadow: rgba(149, 157, 165, 0.7) 0px 8px 24px;
@@ -215,13 +216,15 @@ input {
 .forms-container form .form-control input {
   width: 100%;
   font-size: 1.1rem;
-  color: #333;
+  color: #fff;
   font-family: inherit;
   line-height: 1;
   padding: 0.5rem;
   border: 2px solid #f0f0f0;
   border-radius: 4px;
   outline: none;
+  margin-bottom: 2rem;
+  transition: 0.3s ease all;
 }
 .forms-container form .form-control input:focus {
   outline: 0;
@@ -266,6 +269,7 @@ input {
   transition: 0.5 ease all;
   text-transform: uppercase;
   font-weight: 600;
+  transition: 0.3s ease all;
 }
 .btn:hover {
   background-color: #4f84e2;
