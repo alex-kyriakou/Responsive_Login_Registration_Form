@@ -12,16 +12,34 @@ const password2 = document.getElementById("password2");
 const btn_login = document.getElementById("btn-login");
 const btn_register = document.getElementById("btn-register");
 
+// Show input error message
+function showError(input, message) {
+  const formControl = input.parentElement;
+  formControl.className = "form-control error";
+  const small = formControl.querySelector("small");
+  small.innerText = message;
+}
+
+// ------------------------
+// Event Listeners
+// ------------------------
+
+// Validation functionality
+signUp_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  if (username_signUp.value === "") {
+    showError(username_signUp, "Username is required");
+  } else {
+    showSuccess(username_signUp);
+  }
+});
+
+// Sign In - Sign Up mode Animation
 sign_up_btn.addEventListener("click", () => {
   container.classList.add("sign-up-mode");
 });
 
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
-});
-
-// Validation functionality
-signUp_form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  console.log("submit");
 });
