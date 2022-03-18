@@ -14,10 +14,41 @@ const btn_register = document.getElementById("btn-register");
 
 // Show input error message
 function showError(input, message) {
-  const formControl = input.parentElement;
-  formControl.className = "form-controler error";
-  const small = formControl.querySelector("small");
+  const formControler = input.parentElement;
+  formControler.className = "form-controler error";
+  const small = formControler.querySelector("small");
   small.innerText = message;
+}
+
+// Show Success Outline
+function showSuccess(input) {
+  const formControler = input.parentElement;
+  formControler.className = "form-controler success";
+}
+
+// Show if an email is valid
+function isEmailValid(email) {
+  return String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}
+
+// Check required fields
+function checkRequired(inputArr) {
+  inputArr.forEach((input) => {
+    if (input.value.trim() === "") {
+      showError(input, `${getFieldName(input)} is required`);
+    } else {
+      showSuccess(input);
+    }
+  });
+}
+
+// Get field name function
+function getFieldName(input) {
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // ------------------------
@@ -28,11 +59,14 @@ function showError(input, message) {
 signUp_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  if (username_signUp.value === "") {
-    showError(username_signUp, "Username is required");
-  } else {
-    showSuccess(username_signUp);
-  }
+  checkRequired([
+    username_signIn,
+    username_signUp,
+    email,
+    password_signIn,
+    password_signUp,
+    password2,
+  ]);
 });
 
 // Sign In - Sign Up mode Animation
