@@ -43,7 +43,7 @@
               <div class="form-controler">
                 <label for="password">Password</label>
                 <input
-                  type="new-password"
+                  type="password"
                   id="password_signUp"
                   placeholder="Enter Password"
                 />
@@ -53,7 +53,7 @@
               <div class="form-controler">
                 <label for="password2">Confirm Password</label>
                 <input
-                  type="new-password"
+                  type="password"
                   id="password2"
                   placeholder="Confirm Password"
                 />
@@ -91,21 +91,25 @@
             <h2 class="title">Sign In</h2>
 
             <div class="form-control">
-              <label for="username">Username</label>
-              <input
-                type="text"
-                id="username_signIn"
-                placeholder="Enter username"
-              />
-              <small>Error message</small>
+              <div class="form-controler">
+                <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username_signIn"
+                  placeholder="Enter username"
+                />
+                <small>Error message</small>
+              </div>
 
-              <label for="password">Password</label>
-              <input
-                type="current-password"
-                id="password_signIn"
-                placeholder="Enter Password"
-              />
-              <small>Error message</small>
+              <div class="form-controler">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password_signIn"
+                  placeholder="Enter Password"
+                />
+                <small>Error message</small>
+              </div>
 
               <input
                 id="btn-login"

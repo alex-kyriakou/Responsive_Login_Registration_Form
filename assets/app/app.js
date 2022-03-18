@@ -27,12 +27,23 @@ function showSuccess(input) {
 }
 
 // Show if an email is valid
-function isEmailValid(email) {
-  return String(email)
-    .toLowerCase()
-    .match(
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+function checkEmail(input) {
+  const regExpr =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (regExpr.test(input.value.trim())) {
+    showSuccess(input);
+  } else {
+    showError(input, "Email is not valid");
+  }
+}
+
+// check if Passwords Match
+function checkPswMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Password do not match");
+  } else {
+    showSuccess(input2, "Password Confirmed");
+  }
 }
 
 // Check required fields
@@ -46,16 +57,33 @@ function checkRequired(inputArr) {
   });
 }
 
+// Check input's length
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be more than ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be more than ${max}  characters `
+    );
+  } else {
+    showSuccess(input);
+  }
+}
+
 // Get field name function
 function getFieldName(input) {
-  return input.id.charAt(0).toUpperCase() + input.id.slice(1);
+  return input.id.charAt(0).toUpperCase() + input.id.slice(1, 8);
 }
 
 // ------------------------
 // Event Listeners
 // ------------------------
 
-// Validation functionality
+// SignUp Validation functionality
 signUp_form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -67,6 +95,21 @@ signUp_form.addEventListener("submit", (e) => {
     password_signUp,
     password2,
   ]);
+
+  checkLength(username_signUp, 3, 15);
+  checkLength(password_signUp, 6, 25);
+  checkLength(password2, 6, 25);
+  checkLength(username_signIn, 3, 15);
+  checkLength(password_signIn, 6, 25);
+  checkPswMatch(password_signUp, password2);
+});
+
+// SignIn Validation
+signIn_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  checkLength(username_signIn, 3, 15);
+  checkLength(password_signIn, 6, 25);
 });
 
 // Sign In - Sign Up mode Animation
