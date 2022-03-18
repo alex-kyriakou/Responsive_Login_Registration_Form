@@ -15,7 +15,7 @@ const btn_register = document.getElementById("btn-register");
 // Show input error message
 function showError(input, message) {
   const formControl = input.parentElement;
-  formControl.className = "form-control error";
+  formControl.className = "form-controler error";
   const small = formControl.querySelector("small");
   small.innerText = message;
 }
